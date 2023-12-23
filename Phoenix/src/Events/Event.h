@@ -3,6 +3,7 @@
 #include "Phoenix/Core.h"
 
 #include <functional>
+#include <sstream>
 #include <string>
 
 namespace Phoenix {
@@ -60,6 +61,10 @@ namespace Phoenix {
 			return false;
 		}
 	private:
-		Event& m_Event;
+		Event& m_Event;	
 	};
+
+	std::ostream& operator<<(std::ostream& os, const Event& e) {
+		return os << e.ToString();
+	}
 }
