@@ -4,6 +4,7 @@
 
 namespace Phoenix {
 
+	// parent KeyEvent class, stores the keycode of a key event
 	class PHOENIX_API KeyEvent : public Event {
 	public:
 		int GetKeyCode() const { return m_KeyCode; }
@@ -18,6 +19,7 @@ namespace Phoenix {
 		int m_KeyCode;
 	};
 
+	// event for key presses
 	class PHOENIX_API KeyPressedEvent : public KeyEvent {
 	public:
 		KeyPressedEvent(int keycode, int keyPressAmount) : KeyEvent(keycode), m_RepeatAmount(keyPressAmount) {}
@@ -44,6 +46,7 @@ namespace Phoenix {
 		int m_RepeatAmount;
 	};
 
+	// event for key is released
 	class PHOENIX_API KeyReleasedEvent : public KeyEvent {
 	public:
 		KeyReleasedEvent(int keycode) : KeyEvent(keycode) {}

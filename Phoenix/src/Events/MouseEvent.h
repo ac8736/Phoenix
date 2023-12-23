@@ -4,6 +4,7 @@
 
 namespace Phoenix {
 
+	// mouse move event, carries the mouse's x, y position after it moves
 	class PHOENIX_API MouseMovedEvent : public Event {
 	public:
 		MouseMovedEvent(float mouseX, float mouseY) : m_MouseX(mouseX), m_MouseY(mouseY) {}
@@ -36,6 +37,7 @@ namespace Phoenix {
 		float m_MouseX, m_MouseY;
 	};
 
+	// mouse scroll event, records the scroll x, y offsets after a scroll
 	class PHOENIX_API MouseScrolledEvent : public Event {
 	public:
 		MouseScrolledEvent(float xoffset, float yoffset) : m_XOffset(xoffset), m_YOffset(yoffset) {}
@@ -48,7 +50,7 @@ namespace Phoenix {
 			std::stringstream ss;
 			ss << "Mouse Scrolled Event: (x: " << m_XOffset << " , y: " << m_YOffset << ")";
 			return ss.str();
-		}
+		} 
 
 		static EventType GetStaticType() { return EventType::MouseScrolled; }
 
@@ -67,6 +69,7 @@ namespace Phoenix {
 		float m_XOffset, m_YOffset;
 	};
 
+	// parent mouse button class, stores the mouse button that was pressed
 	class PHOENIX_API MouseButton : public Event {
 	public:
 		int GetKeyCode() const { return m_MouseButton; }
@@ -80,6 +83,7 @@ namespace Phoenix {
 		int m_MouseButton;
 	};
 
+	// event for mouse button presses
 	class PHOENIX_API MouseButtonPressedEvent : public MouseButton {
 	public:
 		MouseButtonPressedEvent(int button) : MouseButton(button) {}
@@ -101,6 +105,7 @@ namespace Phoenix {
 		}
 	};
 
+	// event for mouse button releases
 	class PHOENIX_API MouseButtonReleasedEvent : public MouseButton {
 	public:
 		MouseButtonReleasedEvent(int button) : MouseButton(button) {}

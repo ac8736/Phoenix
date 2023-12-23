@@ -45,11 +45,11 @@ namespace Phoenix {
 		bool handled = false;
 	};
 
+	// Event dispatcher that will run callback functions when an event is triggered
 	class EventDispatcher {
 		template<typename T> using EventFn = std::function<bool(T&)>;
 	public:
-		// not an inheritance, it's a constructor initializer list
-		// this initializes m_Event member variable before executing the constructor body
+		// constructor initializer list
 		EventDispatcher(Event& event) : m_Event(event) {}
 
 		template<typename T>

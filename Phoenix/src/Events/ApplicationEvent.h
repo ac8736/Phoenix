@@ -3,6 +3,8 @@
 #include "Event.h"
 
 namespace Phoenix {
+
+	// app events may not be used, but here in case we need to; could be removed in the future
 	class PHOENIX_API AppTickEvent : public Event {
 	public:
 		AppTickEvent() {}
@@ -58,6 +60,7 @@ namespace Phoenix {
 		}
 	};
 
+	// event triggers when the window is closed
 	class PHOENIX_API WindowCloseEvent : public Event {
 		WindowCloseEvent() {}
 
@@ -76,6 +79,7 @@ namespace Phoenix {
 		}
 	};
 
+	// event for a window resize, will record the window's current width, height
 	class PHOENIX_API WindowResizeEvent : public Event {
 	public:
 		WindowResizeEvent(unsigned int width, unsigned int height) : m_WindowWidth(width), m_WindowHeight(height) {}
@@ -107,7 +111,7 @@ namespace Phoenix {
 		unsigned int m_WindowWidth, m_WindowHeight;
 	};
 
-
+	// below classes may implement later
 	class PHOENIX_API WindowFocusEvent : public Event {
 
 	};
