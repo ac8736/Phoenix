@@ -10,7 +10,7 @@ git clone --recursive https://github.com/ac8736/Phoenix
 ```
 
 #### Premake
-To build the solution files and its configurations, we are using Premake. Run the GenerateProjectFile.bat file to run the Premake script. Premake may be replaced with CMake in the future.
+To build the solution files and its configurations, we are using Premake. Run the GenerateProjectFiles.bat file to run the Premake script. Premake may be replaced with CMake in the future.
 
 ### Dev Log
 A dev log website will be posted here in the future to document the process of the game engine. It will serve as a document to show all the resources used and how the decisions of the engine were made. 
