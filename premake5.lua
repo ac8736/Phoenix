@@ -13,6 +13,9 @@ project "Phoenix"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("obj/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "pnpch.h"
+	pchsource "Phoenix/src/pnpch.cpp"
+	
 	files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
 
 	includedirs { 
