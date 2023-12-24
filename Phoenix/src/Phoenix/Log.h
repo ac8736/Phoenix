@@ -28,7 +28,7 @@ namespace Phoenix
 #define PN_CORE_ERROR(...) ::Phoenix::Log::GetCoreLogger()->error(__VA_ARGS__)
 
 // macros for application logging
-#define PN_TRACE(...) ::Phoenix::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define PN_INFO(...) ::Phoenix::Log::GetClientLogger()->info(__VA_ARGS__)
-#define PN_WARN(...) ::Phoenix::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define PN_ERROR(...) ::Phoenix::Log::GetClientLogger()->error(__VA_ARGS__)
+#define PN_CLIENT_TRACE(...) ::Phoenix::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define PN_CLIENT_INFO(...) ::Phoenix::Log::GetClientLogger()->info(__VA_ARGS__)
+#define PN_CLIENT_WARN(...) ::Phoenix::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define PN_CLIENT_ERROR(...) ::Phoenix::Log::GetClientLogger()->error(__VA_ARGS__)

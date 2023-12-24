@@ -17,8 +17,8 @@ namespace Phoenix
 		// --- testing event classes ---
 		WindowResizeEvent e(1280, 720);
 		MouseButtonPressedEvent m(19);
-		PN_TRACE(e);
-		PN_INFO(m);
+		PN_CLIENT_TRACE(e);
+		PN_CLIENT_INFO(m);
 		// -----------------------------
 
 		while (true);
