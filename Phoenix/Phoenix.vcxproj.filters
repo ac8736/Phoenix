@@ -7,9 +7,21 @@
     <Filter Include="Phoenix">
       <UniqueIdentifier>{40FF9C0C-ACDE-1BA8-B5F6-A67E21558209}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Phoenix\Events">
+      <UniqueIdentifier>{240313B4-10D1-06BA-F964-77E0E5D1E21E}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Events\ApplicationEvent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Events\Event.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Events\KeyEvent.h">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Events\MouseEvent.h">
       <Filter>Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Phoenix.h" />
@@ -22,12 +34,22 @@
     <ClInclude Include="src\Phoenix\EntryPoint.h">
       <Filter>Phoenix</Filter>
     </ClInclude>
+    <ClInclude Include="src\Phoenix\Events\ApplicationEvent.h">
+      <Filter>Phoenix\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Phoenix\Events\Event.h">
+      <Filter>Phoenix\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Phoenix\Events\KeyEvent.h">
+      <Filter>Phoenix\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Phoenix\Events\MouseEvent.h">
+      <Filter>Phoenix\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Phoenix\Log.h">
       <Filter>Phoenix</Filter>
     </ClInclude>
-    <ClInclude Include="src\Events\KeyEvent.h" />
-    <ClInclude Include="src\Events\MouseEvent.h" />
-    <ClInclude Include="src\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\pnpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Phoenix\Application.cpp">
@@ -36,5 +58,6 @@
     <ClCompile Include="src\Phoenix\Log.cpp">
       <Filter>Phoenix</Filter>
     </ClCompile>
+    <ClCompile Include="src\pnpch.cpp" />
   </ItemGroup>
 </Project>
