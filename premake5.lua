@@ -5,6 +5,11 @@ workspace "Phoenix"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Phoenix/vendor/GLFW/include"
+
+include "Phoenix/vendor/GLFW"
+
 project "Phoenix"
 	kind "SharedLib"
 	language "C++"
@@ -20,7 +25,13 @@ project "Phoenix"
 
 	includedirs { 
 		"%{prj.name}/vendor/spdlog/include",
-		"%{prj.name}/src"
+		"%{prj.name}/src",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links {
+		"GLFW",
+		"opengl32.lib",
 	}
 
 	postbuildcommands { ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox") }

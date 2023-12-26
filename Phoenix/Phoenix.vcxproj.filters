@@ -1,29 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Events">
-      <UniqueIdentifier>{3A8963B1-262B-8E87-0FE6-A1DBFB2615D8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Phoenix">
       <UniqueIdentifier>{40FF9C0C-ACDE-1BA8-B5F6-A67E21558209}</UniqueIdentifier>
     </Filter>
     <Filter Include="Phoenix\Events">
       <UniqueIdentifier>{240313B4-10D1-06BA-F964-77E0E5D1E21E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Phoenix\Platform">
+      <UniqueIdentifier>{9463FE20-805C-1D73-A98E-02F895E6FC7E}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Events\ApplicationEvent.h">
-      <Filter>Events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Events\Event.h">
-      <Filter>Events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Events\KeyEvent.h">
-      <Filter>Events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Events\MouseEvent.h">
-      <Filter>Events</Filter>
-    </ClInclude>
     <ClInclude Include="src\Phoenix.h" />
     <ClInclude Include="src\Phoenix\Application.h">
       <Filter>Phoenix</Filter>
@@ -49,6 +37,12 @@
     <ClInclude Include="src\Phoenix\Log.h">
       <Filter>Phoenix</Filter>
     </ClInclude>
+    <ClInclude Include="src\Phoenix\Platform\WindowsWindow.h">
+      <Filter>Phoenix\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Phoenix\Window.h">
+      <Filter>Phoenix</Filter>
+    </ClInclude>
     <ClInclude Include="src\pnpch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +51,9 @@
     </ClCompile>
     <ClCompile Include="src\Phoenix\Log.cpp">
       <Filter>Phoenix</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Phoenix\Platform\WindowsWindow.cpp">
+      <Filter>Phoenix\Platform</Filter>
     </ClCompile>
     <ClCompile Include="src\pnpch.cpp" />
   </ItemGroup>
