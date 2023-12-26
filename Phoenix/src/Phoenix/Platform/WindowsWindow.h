@@ -4,6 +4,8 @@
 #include "GLFW/glfw3.h"
 
 namespace Phoenix {
+
+	// Windows implementation of Window
 	class WindowsWindow : public Window {
 	public:
 		WindowsWindow(const WindowProps& props);
@@ -22,6 +24,8 @@ namespace Phoenix {
 		virtual void Shutdown();
 
 		GLFWwindow* m_Window;
+
+		// data to be passed during event callbacks
 		struct WindowData {
 			std::string Title;
 			unsigned int Width;

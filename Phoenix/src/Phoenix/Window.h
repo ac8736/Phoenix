@@ -6,6 +6,7 @@
 #include "Core.h"
 
 namespace Phoenix {
+	// will contain the basic window information
 	struct WindowProps {
 		std::string Title;
 		unsigned int Width;
@@ -16,6 +17,8 @@ namespace Phoenix {
 					unsigned int height=720) : Title(title), Width(width), Height(height) {}
 	};
 
+	// abstracting the Window class
+	// platform independent, each platform must implement this interface
 	class PHOENIX_API Window {
 	public:
 		using EventCallbackFn = std::function<void(Event&)>;
