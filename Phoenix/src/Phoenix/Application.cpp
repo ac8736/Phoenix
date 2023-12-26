@@ -16,11 +16,6 @@ namespace Phoenix
 	}
 
 	void Application::Run() {
-		// --- testing event classes ---
-		WindowResizeEvent e(1280, 720);
-		PN_CLIENT_TRACE(e);
-		// -----------------------------
-
 		while (m_Running) {
 			m_Window->OnUpdate();
 		}
