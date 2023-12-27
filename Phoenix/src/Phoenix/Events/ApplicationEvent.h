@@ -43,6 +43,7 @@ namespace Phoenix {
 	};
 
 	class PHOENIX_API AppRenderEvent : public Event {
+	public:
 		AppRenderEvent() {}
 
 		int GetCategoryFlags() const override {
@@ -62,6 +63,7 @@ namespace Phoenix {
 
 	// event triggers when the window is closed
 	class PHOENIX_API WindowCloseEvent : public Event {
+	public:
 		WindowCloseEvent() {}
 
 		static EventType GetStaticType() { return EventType::WindowClose; }
