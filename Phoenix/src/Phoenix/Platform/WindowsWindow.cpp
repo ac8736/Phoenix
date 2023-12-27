@@ -2,9 +2,15 @@
 
 #include "WindowsWindow.h"
 #include "Phoenix/Log.h"
+#include "Phoenix/Events/ApplicationEvent.h"
+#include "Phoenix/Events/KeyEvent.h"
+#include "Phoenix/Events/MouseEvent.h"
 
 namespace Phoenix {
 	static bool s_GLFWInitialized = false;
+	static void GLFWErrorCallback(int error_code, const char* description) {
+		PN_CORE_ERROR("GLFW Error {0}: {1}", error_code, description);
+	}
 
 	// will create a new Windows window instance
 	Window* Window::Create(const WindowProps& props) {
@@ -34,6 +40,7 @@ namespace Phoenix {
 			int success = glfwInit();
 			// assertion macro to stop program if glfw could not initialize
 			PN_CORE_ASSERT(success, "GLFW could not initialize.");
+			glfwSetErrorCallback(GLFWErrorCallback);
 			s_GLFWInitialized = true;
 		}
 
@@ -42,6 +49,67 @@ namespace Phoenix {
 		glfwMakeContextCurrent(m_Window);
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
+
+		// setting up glfw callbacks; which calls the EventCallback function inside the WindowData struct with the event triggered
+		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height) {
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			data.Width = width;
+			data.Height = height;
+
+			WindowResizeEvent event(width, height);
+			data.EventCallback(event);
+		});
+		glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* window) {
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			WindowCloseEvent event;
+
+			data.EventCallback(event);
+		});
+		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods) {
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			switch (action) {
+				case GLFW_PRESS: {
+					MouseButtonPressedEvent mousePressed(button);
+					data.EventCallback(mousePressed);
+					break;
+				}
+				case GLFW_RELEASE: {
+					MouseButtonReleasedEvent mouseReleased(button);
+					data.EventCallback(mouseReleased);
+					break;
+				}
+			}
+		});
+		glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods) {
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			switch (action) {
+				case GLFW_PRESS: {
+					KeyPressedEvent keyPressed(key, 0);
+					data.EventCallback(keyPressed);
+					break;
+				}
+				case GLFW_RELEASE: {
+					KeyReleasedEvent keyReleased(key);
+					data.EventCallback(keyReleased);
+					break;
+				}
+				case GLFW_REPEAT: {
+					KeyPressedEvent keyRepeat(key, 1);
+					data.EventCallback(keyRepeat);
+					break;
+				}
+			}
+		});
+		glfwSetScrollCallback(m_Window, [](GLFWwindow* window, double xoffset, double yoffset) {
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			MouseScrolledEvent event(xoffset, yoffset);
+			data.EventCallback(event);
+		});
+		glfwSetCursorPosCallback(m_Window, [](GLFWwindow* window, double xpos, double ypos) {
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			MouseMovedEvent event((float)xpos, (float)ypos);
+			data.EventCallback(event);
+		});
 	}
 
 	// destroy glfw window on shutdown
