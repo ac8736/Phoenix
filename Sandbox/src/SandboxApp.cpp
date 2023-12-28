@@ -13,8 +13,7 @@ public:
     }
 };
 
-class Sandbox : public Phoenix::Application
-{
+class Sandbox : public Phoenix::Application {
 public:
     Sandbox() {
         PushLayer(new ExampleLayer());
