@@ -8,7 +8,7 @@ int main(int argc, char** argv) {
     Phoenix::Log::Init();
     PN_CORE_INFO("Welcome to the Phoenix Engine.");
     PN_CLIENT_TRACE("Sandbox started.");
-    auto app = Phoenix::CreateApplication();
+    Phoenix::Application* app = Phoenix::CreateApplication();
     app->Run();
     delete app;
 }

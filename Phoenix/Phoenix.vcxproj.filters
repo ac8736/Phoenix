@@ -7,6 +7,12 @@
     <Filter Include="Phoenix\Events">
       <UniqueIdentifier>{240313B4-10D1-06BA-F964-77E0E5D1E21E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Phoenix\Layers">
+      <UniqueIdentifier>{FFEDF5C2-EBBB-E9C8-D44F-5AEFC0BCC52D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Phoenix\Log">
+      <UniqueIdentifier>{11B7A505-7D6C-1EFB-0661-18D2721515FF}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Phoenix\Platform">
       <UniqueIdentifier>{9463FE20-805C-1D73-A98E-02F895E6FC7E}</UniqueIdentifier>
     </Filter>
@@ -34,8 +40,14 @@
     <ClInclude Include="src\Phoenix\Events\MouseEvent.h">
       <Filter>Phoenix\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Phoenix\Log.h">
-      <Filter>Phoenix</Filter>
+    <ClInclude Include="src\Phoenix\Layers\Layer.h">
+      <Filter>Phoenix\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Phoenix\Layers\LayerStack.h">
+      <Filter>Phoenix\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Phoenix\Log\Log.h">
+      <Filter>Phoenix\Log</Filter>
     </ClInclude>
     <ClInclude Include="src\Phoenix\Platform\WindowsWindow.h">
       <Filter>Phoenix\Platform</Filter>
@@ -49,8 +61,14 @@
     <ClCompile Include="src\Phoenix\Application.cpp">
       <Filter>Phoenix</Filter>
     </ClCompile>
-    <ClCompile Include="src\Phoenix\Log.cpp">
-      <Filter>Phoenix</Filter>
+    <ClCompile Include="src\Phoenix\Layers\Layer.cpp">
+      <Filter>Phoenix\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Phoenix\Layers\LayerStack.cpp">
+      <Filter>Phoenix\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Phoenix\Log\Log.cpp">
+      <Filter>Phoenix\Log</Filter>
     </ClCompile>
     <ClCompile Include="src\Phoenix\Platform\WindowsWindow.cpp">
       <Filter>Phoenix\Platform</Filter>

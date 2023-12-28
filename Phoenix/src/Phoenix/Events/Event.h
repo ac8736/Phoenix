@@ -37,6 +37,7 @@ namespace Phoenix {
 
 		// checks the event category with EventCategory enum
 		bool IsInCategory(EventCategory category) const { return GetCategoryFlags() & category; }
+		inline bool IsHandled() const { return handled; }
 	
 	protected:
 		bool handled = false;

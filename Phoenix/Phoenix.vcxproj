@@ -83,7 +83,7 @@
       <AdditionalIncludeDirectories>vendor\spdlog\include;src;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
     <Link>
@@ -108,7 +108,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
     <Link>
@@ -134,7 +134,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
     <Link>
@@ -157,14 +157,18 @@
     <ClInclude Include="src\Phoenix\Events\Event.h" />
     <ClInclude Include="src\Phoenix\Events\KeyEvent.h" />
     <ClInclude Include="src\Phoenix\Events\MouseEvent.h" />
-    <ClInclude Include="src\Phoenix\Log.h" />
+    <ClInclude Include="src\Phoenix\Layers\Layer.h" />
+    <ClInclude Include="src\Phoenix\Layers\LayerStack.h" />
+    <ClInclude Include="src\Phoenix\Log\Log.h" />
     <ClInclude Include="src\Phoenix\Platform\WindowsWindow.h" />
     <ClInclude Include="src\Phoenix\Window.h" />
     <ClInclude Include="src\pnpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Phoenix\Application.cpp" />
-    <ClCompile Include="src\Phoenix\Log.cpp" />
+    <ClCompile Include="src\Phoenix\Layers\Layer.cpp" />
+    <ClCompile Include="src\Phoenix\Layers\LayerStack.cpp" />
+    <ClCompile Include="src\Phoenix\Log\Log.cpp" />
     <ClCompile Include="src\Phoenix\Platform\WindowsWindow.cpp" />
     <ClCompile Include="src\pnpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
