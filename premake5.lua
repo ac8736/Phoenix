@@ -7,8 +7,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Phoenix/vendor/GLFW/include"
+IncludeDir["Glad"] = "Phoenix/vendor/Glad/include"
 
 include "Phoenix/vendor/GLFW"
+include "Phoenix/vendor/Glad"
 
 project "Phoenix"
 	kind "SharedLib"
@@ -26,10 +28,12 @@ project "Phoenix"
 	includedirs { 
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/src",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links {
+		"Glad",
 		"GLFW",
 		"opengl32.lib",
 	}
@@ -43,7 +47,8 @@ project "Phoenix"
 
 		defines {
 			"PN_PLATFORM_WINDOWS",
-			"PN_BUILD_DLL"
+			"PN_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 	filter "configurations:Debug"
