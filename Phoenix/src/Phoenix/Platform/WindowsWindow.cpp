@@ -1,7 +1,7 @@
 #include "pnpch.h"
 
 #include "WindowsWindow.h"
-#include "Phoenix/Log.h"
+#include "Phoenix/Log/Log.h"
 #include "Phoenix/Events/ApplicationEvent.h"
 #include "Phoenix/Events/KeyEvent.h"
 #include "Phoenix/Events/MouseEvent.h"
