@@ -4,3 +4,6 @@
 [submodule "Phoenix/vendor/GLFW"]
 	path = Phoenix/vendor/GLFW
 	url = https://github.com/ac8736/glfw
+[submodule "Phoenix/vendor/imgui"]
+	path = Phoenix/vendor/imgui
+	url = https://github.com/ac8736/imgui

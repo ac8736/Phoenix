@@ -5,6 +5,7 @@
 #include "Phoenix/Application.h"
 #include "Phoenix/Log/Log.h"
 #include "Phoenix/Layers/Layer.h"
+#include "Phoenix/ImGui/ImGuiLayer.h"
 
 // ---- Entry Point -------
 #include "Phoenix/EntryPoint.h"
