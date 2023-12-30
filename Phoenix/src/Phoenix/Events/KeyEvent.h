@@ -67,4 +67,26 @@ namespace Phoenix {
 			return "KeyReleased";
 		}
 	};
+
+	// event for key presses
+	class PHOENIX_API KeyTypedEvent : public KeyEvent {
+	public:
+		KeyTypedEvent(int keycode) : KeyEvent(keycode) {}
+
+		std::string ToString() const override {
+			std::stringstream ss;
+			ss << "Key Typed Event: " << m_KeyCode;
+			return ss.str();
+		}
+
+		static EventType GetStaticType() { return EventType::KeyTyped; }
+
+		EventType GetEventType() const override {
+			return GetStaticType();
+		}
+
+		const char* GetName() const override {
+			return "KeyTyped";
+		}
+	};
 }

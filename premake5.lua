@@ -8,9 +8,11 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Phoenix/vendor/GLFW/include"
 IncludeDir["Glad"] = "Phoenix/vendor/Glad/include"
+IncludeDir["ImGui"] = "Phoenix/vendor/imgui"
 
 include "Phoenix/vendor/GLFW"
 include "Phoenix/vendor/Glad"
+include "Phoenix/vendor/imgui"
 
 project "Phoenix"
 	kind "SharedLib"
@@ -29,11 +31,13 @@ project "Phoenix"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/src",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links {
 		"Glad",
+		"ImGui",
 		"GLFW",
 		"opengl32.lib",
 	}

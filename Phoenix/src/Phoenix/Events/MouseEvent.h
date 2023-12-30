@@ -62,9 +62,9 @@ namespace Phoenix {
 			return "MouseScrolled";
 		}
 
-		float GetX() const { return m_XOffset; }
+		float GetXOffset() const { return m_XOffset; }
 
-		float GetY() const { return m_YOffset; }
+		float GetYOffset() const { return m_YOffset; }
 	private:
 		float m_XOffset, m_YOffset;
 	};
@@ -72,7 +72,7 @@ namespace Phoenix {
 	// parent mouse button class, stores the mouse button that was pressed
 	class PHOENIX_API MouseButton : public Event {
 	public:
-		int GetKeyCode() const { return m_MouseButton; }
+		int GetMouseButton() const { return m_MouseButton; }
 
 		int GetCategoryFlags() const override {
 			return EventCategoryInput | EventCategoryMouse;

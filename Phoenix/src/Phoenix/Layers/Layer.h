@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Events/Event.h"
+#include "Phoenix/Events/Event.h"
 
 namespace Phoenix {
 	class PHOENIX_API Layer {

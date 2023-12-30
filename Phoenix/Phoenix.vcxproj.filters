@@ -7,6 +7,9 @@
     <Filter Include="Phoenix\Events">
       <UniqueIdentifier>{240313B4-10D1-06BA-F964-77E0E5D1E21E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Phoenix\ImGui">
+      <UniqueIdentifier>{6AE4B705-D6A4-333C-9FDF-7CB90B5F7818}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Phoenix\Layers">
       <UniqueIdentifier>{FFEDF5C2-EBBB-E9C8-D44F-5AEFC0BCC52D}</UniqueIdentifier>
     </Filter>
@@ -15,6 +18,9 @@
     </Filter>
     <Filter Include="Phoenix\Platform">
       <UniqueIdentifier>{9463FE20-805C-1D73-A98E-02F895E6FC7E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Phoenix\Platform\OpenGL">
+      <UniqueIdentifier>{48BEFC44-B4F5-44DC-BDFF-A8FF29B66BD5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -40,6 +46,9 @@
     <ClInclude Include="src\Phoenix\Events\MouseEvent.h">
       <Filter>Phoenix\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Phoenix\ImGui\ImGuiLayer.h">
+      <Filter>Phoenix\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Phoenix\Layers\Layer.h">
       <Filter>Phoenix\Layers</Filter>
     </ClInclude>
@@ -48,6 +57,9 @@
     </ClInclude>
     <ClInclude Include="src\Phoenix\Log\Log.h">
       <Filter>Phoenix\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLRenderer.h">
+      <Filter>Phoenix\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Phoenix\Platform\WindowsWindow.h">
       <Filter>Phoenix\Platform</Filter>
@@ -61,6 +73,9 @@
     <ClCompile Include="src\Phoenix\Application.cpp">
       <Filter>Phoenix</Filter>
     </ClCompile>
+    <ClCompile Include="src\Phoenix\ImGui\ImGuiLayer.cpp">
+      <Filter>Phoenix\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Phoenix\Layers\Layer.cpp">
       <Filter>Phoenix\Layers</Filter>
     </ClCompile>
@@ -69,6 +84,9 @@
     </ClCompile>
     <ClCompile Include="src\Phoenix\Log\Log.cpp">
       <Filter>Phoenix\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLRenderer.cpp">
+      <Filter>Phoenix\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Phoenix\Platform\WindowsWindow.cpp">
       <Filter>Phoenix\Platform</Filter>
