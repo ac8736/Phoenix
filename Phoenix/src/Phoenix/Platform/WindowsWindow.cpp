@@ -103,6 +103,11 @@ namespace Phoenix {
 				}
 			}
 		});
+		glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int character) {
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			KeyTypedEvent event(character);
+			data.EventCallback(event);
+		});
 		glfwSetScrollCallback(m_Window, [](GLFWwindow* window, double xoffset, double yoffset) {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 			MouseScrolledEvent event(xoffset, yoffset);
