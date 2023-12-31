@@ -24,7 +24,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Phoenix.h" />
+    <ClInclude Include="src\Phoenix\Phoenix.h" />
     <ClInclude Include="src\Phoenix\Application.h">
       <Filter>Phoenix</Filter>
     </ClInclude>
@@ -61,13 +61,15 @@
     <ClInclude Include="src\Phoenix\Platform\OpenGL\ImGuiOpenGLRenderer.h">
       <Filter>Phoenix\Platform\OpenGL</Filter>
     </ClInclude>
-    <ClInclude Include="src\Phoenix\Platform\WindowsWindow.h">
+    <ClInclude Include="src\Phoenix\Platform\Windows\WindowsWindow.h">
       <Filter>Phoenix\Platform</Filter>
     </ClInclude>
     <ClInclude Include="src\Phoenix\Window.h">
       <Filter>Phoenix</Filter>
     </ClInclude>
     <ClInclude Include="src\pnpch.h" />
+    <ClInclude Include="src\Phoenix\Input.h" />
+    <ClInclude Include="src\Phoenix\Platform\Windows\WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Phoenix\Application.cpp">
@@ -88,9 +90,10 @@
     <ClCompile Include="src\Phoenix\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
       <Filter>Phoenix\Platform\OpenGL</Filter>
     </ClCompile>
-    <ClCompile Include="src\Phoenix\Platform\WindowsWindow.cpp">
+    <ClCompile Include="src\Phoenix\Platform\Windows\WindowsWindow.cpp">
       <Filter>Phoenix\Platform</Filter>
     </ClCompile>
     <ClCompile Include="src\pnpch.cpp" />
+    <ClCompile Include="src\Phoenix\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>
