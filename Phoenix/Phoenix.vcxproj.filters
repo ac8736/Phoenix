@@ -58,7 +58,7 @@
     <ClInclude Include="src\Phoenix\Log\Log.h">
       <Filter>Phoenix\Log</Filter>
     </ClInclude>
-    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLRenderer.h">
+    <ClInclude Include="src\Phoenix\Platform\OpenGL\ImGuiOpenGLRenderer.h">
       <Filter>Phoenix\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Phoenix\Platform\WindowsWindow.h">
@@ -85,7 +85,7 @@
     <ClCompile Include="src\Phoenix\Log\Log.cpp">
       <Filter>Phoenix\Log</Filter>
     </ClCompile>
-    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLRenderer.cpp">
+    <ClCompile Include="src\Phoenix\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
       <Filter>Phoenix\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Phoenix\Platform\WindowsWindow.cpp">

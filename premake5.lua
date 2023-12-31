@@ -42,7 +42,7 @@ project "Phoenix"
 		"opengl32.lib",
 	}
 
-	postbuildcommands { ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox") }
+	postbuildcommands { ("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"") }
 
 	filter "system:windows"
 		cppdialect "Default"
