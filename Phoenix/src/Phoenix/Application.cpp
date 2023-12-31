@@ -2,6 +2,7 @@
 
 #include "Application.h"
 #include "Log/Log.h"
+#include "Input.h"
 
 #include "Events/ApplicationEvent.h"
 #include <glad/glad.h>
@@ -44,6 +45,8 @@ namespace Phoenix {
 				layer->OnUpdate();
 			}
 
+			std::pair<float, float> mousePos = Input::GetMousePos();
+			PN_CORE_INFO("MouseX: {0}, MouseY: {1}", mousePos.first, mousePos.second);
 			m_Window->OnUpdate();
 		}
 	}

@@ -149,7 +149,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Phoenix.h" />
+    <ClInclude Include="src\Phoenix\Input.h" />
+    <ClInclude Include="src\Phoenix\Phoenix.h" />
     <ClInclude Include="src\Phoenix\Application.h" />
     <ClInclude Include="src\Phoenix\Core.h" />
     <ClInclude Include="src\Phoenix\EntryPoint.h" />
@@ -162,7 +163,8 @@
     <ClInclude Include="src\Phoenix\Layers\LayerStack.h" />
     <ClInclude Include="src\Phoenix\Log\Log.h" />
     <ClInclude Include="src\Phoenix\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
-    <ClInclude Include="src\Phoenix\Platform\WindowsWindow.h" />
+    <ClInclude Include="src\Phoenix\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Phoenix\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Phoenix\Window.h" />
     <ClInclude Include="src\pnpch.h" />
   </ItemGroup>
@@ -173,7 +175,8 @@
     <ClCompile Include="src\Phoenix\Layers\LayerStack.cpp" />
     <ClCompile Include="src\Phoenix\Log\Log.cpp" />
     <ClCompile Include="src\Phoenix\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
-    <ClCompile Include="src\Phoenix\Platform\WindowsWindow.cpp" />
+    <ClCompile Include="src\Phoenix\Platform\Windows\WindowsInput.cpp" />
+    <ClCompile Include="src\Phoenix\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\pnpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
