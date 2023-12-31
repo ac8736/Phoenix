@@ -10,9 +10,12 @@ IncludeDir["GLFW"] = "Phoenix/vendor/GLFW/include"
 IncludeDir["Glad"] = "Phoenix/vendor/Glad/include"
 IncludeDir["ImGui"] = "Phoenix/vendor/imgui"
 
-include "Phoenix/vendor/GLFW"
-include "Phoenix/vendor/Glad"
-include "Phoenix/vendor/imgui"
+
+group "Dependencies"
+	include "Phoenix/vendor/GLFW"
+	include "Phoenix/vendor/Glad"
+	include "Phoenix/vendor/imgui"
+group ""
 
 project "Phoenix"
 	kind "SharedLib"
@@ -42,7 +45,7 @@ project "Phoenix"
 		"opengl32.lib",
 	}
 
-	postbuildcommands { ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox") }
+	postbuildcommands { ("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"") }
 
 	filter "system:windows"
 		cppdialect "Default"
