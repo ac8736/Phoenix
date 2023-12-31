@@ -10,9 +10,12 @@ IncludeDir["GLFW"] = "Phoenix/vendor/GLFW/include"
 IncludeDir["Glad"] = "Phoenix/vendor/Glad/include"
 IncludeDir["ImGui"] = "Phoenix/vendor/imgui"
 
-include "Phoenix/vendor/GLFW"
-include "Phoenix/vendor/Glad"
-include "Phoenix/vendor/imgui"
+
+group "Dependencies"
+	include "Phoenix/vendor/GLFW"
+	include "Phoenix/vendor/Glad"
+	include "Phoenix/vendor/imgui"
+group ""
 
 project "Phoenix"
 	kind "SharedLib"
