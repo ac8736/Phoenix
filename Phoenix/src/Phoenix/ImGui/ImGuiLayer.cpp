@@ -177,7 +177,7 @@ namespace Phoenix {
 	}
 
 	void ImGuiLayer::OnEvent(Event& e) {
-        PN_CORE_TRACE("ImGui Layer {0}", e);
+        // PN_CORE_TRACE("ImGui Layer {0}", e);
         EventDispatcher dispatcher(e);
         dispatcher.Dispatch<MouseButtonPressedEvent>(BIND_EVENT_FN(ImGuiLayer::OnMouseButtonPressed));
         dispatcher.Dispatch<MouseButtonReleasedEvent>(BIND_EVENT_FN(ImGuiLayer::OnMouseButtonReleased));

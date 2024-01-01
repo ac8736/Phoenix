@@ -25,7 +25,7 @@ namespace Phoenix {
 	}
 
 	void Application::OnEvent(Event& e) {
-		PN_CORE_TRACE("{0}", e);
+		// PN_CORE_TRACE("{0}", e);
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClose));
 
@@ -34,7 +34,7 @@ namespace Phoenix {
 			if (e.IsHandled()) {
 				break;
 			}
-		}
+		} 
 	}
 
 	void Application::Run() {
@@ -45,8 +45,8 @@ namespace Phoenix {
 				layer->OnUpdate();
 			}
 
-			std::pair<float, float> mousePos = Input::GetMousePos();
-			PN_CORE_INFO("MouseX: {0}, MouseY: {1}", mousePos.first, mousePos.second);
+			// std::pair<float, float> mousePos = Input::GetMousePos();
+			// PN_CORE_INFO("MouseX: {0}, MouseY: {1}", mousePos.first, mousePos.second);
 			m_Window->OnUpdate();
 		}
 	}
