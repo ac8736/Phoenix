@@ -54,6 +54,9 @@
     <ClInclude Include="src\Phoenix\Input.h">
       <Filter>Phoenix</Filter>
     </ClInclude>
+    <ClInclude Include="src\Phoenix\KeyCodes.h">
+      <Filter>Phoenix</Filter>
+    </ClInclude>
     <ClInclude Include="src\Phoenix\Layers\Layer.h">
       <Filter>Phoenix\Layers</Filter>
     </ClInclude>
@@ -62,6 +65,9 @@
     </ClInclude>
     <ClInclude Include="src\Phoenix\Log\Log.h">
       <Filter>Phoenix\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Phoenix\MouseButtonCodes.h">
+      <Filter>Phoenix</Filter>
     </ClInclude>
     <ClInclude Include="src\Phoenix\Phoenix.h">
       <Filter>Phoenix</Filter>
@@ -79,8 +85,6 @@
       <Filter>Phoenix</Filter>
     </ClInclude>
     <ClInclude Include="src\pnpch.h" />
-    <ClInclude Include="src\Phoenix\KeyCodes.h" />
-    <ClInclude Include="src\Phoenix\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Phoenix\Application.cpp">

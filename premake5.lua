@@ -9,7 +9,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Phoenix/vendor/GLFW/include"
 IncludeDir["Glad"] = "Phoenix/vendor/Glad/include"
 IncludeDir["ImGui"] = "Phoenix/vendor/imgui"
-
+IncludeDir["glm"] = "Phoenix/vendor/glm"
 
 group "Dependencies"
 	include "Phoenix/vendor/GLFW"
@@ -28,14 +28,18 @@ project "Phoenix"
 	pchheader "pnpch.h"
 	pchsource "Phoenix/src/pnpch.cpp"
 	
-	files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
+	files { 
+		"%{prj.name}/src/**.h", 
+		"%{prj.name}/src/**.cpp" 
+	}
 
 	includedirs { 
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/src",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links {
@@ -88,6 +92,7 @@ project "Sandbox"
 
 	includedirs { 
 		"Phoenix/vendor/spdlog/include",
+		"%{IncludeDir.glm}",
 		"Phoenix/src"
 	}
 
