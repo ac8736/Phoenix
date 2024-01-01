@@ -149,8 +149,6 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Phoenix\Input.h" />
-    <ClInclude Include="src\Phoenix\Phoenix.h" />
     <ClInclude Include="src\Phoenix\Application.h" />
     <ClInclude Include="src\Phoenix\Core.h" />
     <ClInclude Include="src\Phoenix\EntryPoint.h" />
@@ -159,9 +157,13 @@
     <ClInclude Include="src\Phoenix\Events\KeyEvent.h" />
     <ClInclude Include="src\Phoenix\Events\MouseEvent.h" />
     <ClInclude Include="src\Phoenix\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Phoenix\Input.h" />
+    <ClInclude Include="src\Phoenix\KeyCodes.h" />
     <ClInclude Include="src\Phoenix\Layers\Layer.h" />
     <ClInclude Include="src\Phoenix\Layers\LayerStack.h" />
     <ClInclude Include="src\Phoenix\Log\Log.h" />
+    <ClInclude Include="src\Phoenix\MouseButtonCodes.h" />
+    <ClInclude Include="src\Phoenix\Phoenix.h" />
     <ClInclude Include="src\Phoenix\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Phoenix\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Phoenix\Platform\Windows\WindowsWindow.h" />

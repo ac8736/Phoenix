@@ -34,7 +34,7 @@ namespace Phoenix {
 		m_Data.Width = props.Width;
 		m_Data.Height = props.Height;
 
-		PN_CORE_INFO("Window {0} of width {1} and height {2} is being created.", props.Title, props.Width, props.Height);
+		// PN_CORE_INFO("Window {0} of width {1} and height {2} is being created.", props.Title, props.Width, props.Height);
 
 		// check if glfw is initialized, if not then initialize
 		if (!s_GLFWInitialized) {
