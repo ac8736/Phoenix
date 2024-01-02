@@ -72,9 +72,6 @@
     <ClInclude Include="src\Phoenix\Phoenix.h">
       <Filter>Phoenix</Filter>
     </ClInclude>
-    <ClInclude Include="src\Phoenix\Platform\OpenGL\ImGuiOpenGLRenderer.h">
-      <Filter>Phoenix\Platform\OpenGL</Filter>
-    </ClInclude>
     <ClInclude Include="src\Phoenix\Platform\Windows\WindowsInput.h">
       <Filter>Phoenix\Platform\Windows</Filter>
     </ClInclude>
@@ -102,9 +99,6 @@
     <ClCompile Include="src\Phoenix\Log\Log.cpp">
       <Filter>Phoenix\Log</Filter>
     </ClCompile>
-    <ClCompile Include="src\Phoenix\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
-      <Filter>Phoenix\Platform\OpenGL</Filter>
-    </ClCompile>
     <ClCompile Include="src\Phoenix\Platform\Windows\WindowsInput.cpp">
       <Filter>Phoenix\Platform\Windows</Filter>
     </ClCompile>
@@ -112,5 +106,6 @@
       <Filter>Phoenix\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\pnpch.cpp" />
+    <ClCompile Include="src\Phoenix\ImGui\ImGuiBuild.cpp" />
   </ItemGroup>
 </Project>

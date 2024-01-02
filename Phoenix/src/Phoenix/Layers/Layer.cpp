@@ -13,5 +13,7 @@ namespace Phoenix {
 
 	void Layer::OnUpdate() {}
 
+	void Layer::OnImGuiRender() {}
+
 	void Layer::OnEvent(Event& e) {}
 }
