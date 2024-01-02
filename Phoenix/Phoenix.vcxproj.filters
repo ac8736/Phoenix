@@ -19,9 +19,6 @@
     <Filter Include="Phoenix\Platform">
       <UniqueIdentifier>{9463FE20-805C-1D73-A98E-02F895E6FC7E}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Phoenix\Platform\OpenGL">
-      <UniqueIdentifier>{48BEFC44-B4F5-44DC-BDFF-A8FF29B66BD5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Phoenix\Platform\Windows">
       <UniqueIdentifier>{CE61B03C-BA86-FFBC-E3D1-E44CCF55FEDA}</UniqueIdentifier>
     </Filter>
@@ -72,9 +69,6 @@
     <ClInclude Include="src\Phoenix\Phoenix.h">
       <Filter>Phoenix</Filter>
     </ClInclude>
-    <ClInclude Include="src\Phoenix\Platform\OpenGL\ImGuiOpenGLRenderer.h">
-      <Filter>Phoenix\Platform\OpenGL</Filter>
-    </ClInclude>
     <ClInclude Include="src\Phoenix\Platform\Windows\WindowsInput.h">
       <Filter>Phoenix\Platform\Windows</Filter>
     </ClInclude>
@@ -90,6 +84,9 @@
     <ClCompile Include="src\Phoenix\Application.cpp">
       <Filter>Phoenix</Filter>
     </ClCompile>
+    <ClCompile Include="src\Phoenix\ImGui\ImGuiBuild.cpp">
+      <Filter>Phoenix\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Phoenix\ImGui\ImGuiLayer.cpp">
       <Filter>Phoenix\ImGui</Filter>
     </ClCompile>
@@ -101,9 +98,6 @@
     </ClCompile>
     <ClCompile Include="src\Phoenix\Log\Log.cpp">
       <Filter>Phoenix\Log</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Phoenix\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
-      <Filter>Phoenix\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Phoenix\Platform\Windows\WindowsInput.cpp">
       <Filter>Phoenix\Platform\Windows</Filter>

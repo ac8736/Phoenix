@@ -4,6 +4,7 @@
 #include "Window.h"
 #include "Events/ApplicationEvent.h"
 #include "Layers/LayerStack.h"
+#include "ImGui/ImGuiLayer.h"
 
 namespace Phoenix 
 {
@@ -27,6 +28,7 @@ namespace Phoenix
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 
 		static Application* s_Instance;
 	};

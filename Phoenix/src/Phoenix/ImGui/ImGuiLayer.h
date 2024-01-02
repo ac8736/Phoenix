@@ -13,23 +13,13 @@ namespace Phoenix {
 		ImGuiLayer();
 		~ImGuiLayer();
 
-		void OnUpdate() override;
 		void OnAttach() override;
 		void OnDetach() override;
-		void OnEvent(Event& e);
+		void OnImGuiRender() override;
 
+		void Begin();
+		void End();
 	private:
-		bool OnMouseButtonPressed(MouseButtonPressedEvent& e);
-		bool OnMouseButtonReleased(MouseButtonReleasedEvent& e);
-		bool OnMouseMoved(MouseMovedEvent& e);
-		bool OnMouseScrolled(MouseScrolledEvent& e);
-
-		bool OnKeyPressed(KeyPressedEvent& e);
-		bool OnKeyReleased(KeyReleasedEvent& e);
-		bool OnKeyTyped(KeyTypedEvent& e);
-
-		bool OnWindowResize(WindowResizeEvent& e);
-
 		float m_DeltaTime = 0.0f;
 	};
 }

@@ -6,6 +6,7 @@ workspace "Phoenix"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
+IncludeDir["spdlog"] = "Phoenix/vendor/spdlog/include"
 IncludeDir["GLFW"] = "Phoenix/vendor/GLFW/include"
 IncludeDir["Glad"] = "Phoenix/vendor/Glad/include"
 IncludeDir["ImGui"] = "Phoenix/vendor/imgui"
@@ -34,7 +35,7 @@ project "Phoenix"
 	}
 
 	includedirs { 
-		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.spdlog}",
 		"%{prj.name}/src",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
@@ -91,13 +92,15 @@ project "Sandbox"
 	files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
 
 	includedirs { 
-		"Phoenix/vendor/spdlog/include",
+		"%{IncludeDir.spdlog}",
 		"%{IncludeDir.glm}",
+		"%{IncludeDir.ImGui}",
 		"Phoenix/src"
 	}
 
 	links {
-		"Phoenix"
+		"Phoenix",
+		"ImGui"
 	}
 
 	filter "system:windows"

@@ -2,9 +2,7 @@
 #include "LayerStack.h"
 
 namespace Phoenix {
-	LayerStack::LayerStack() {
-		m_LayerInsertIndex = -1;
-	}
+	LayerStack::LayerStack() {}
 
 	LayerStack::~LayerStack() {
 		for (Layer* layer : m_Layers) {
@@ -13,15 +11,7 @@ namespace Phoenix {
 	}
 
 	void LayerStack::PushLayer(Layer* layer) {
-		if (m_Layers.size() == 0) {
-			m_Layers.emplace_back(layer);
-		}
-		else {
-			std::vector<Layer*>::iterator iter = m_Layers.begin() + m_LayerInsertIndex + 1;
-			if (iter != m_Layers.end()) {
-				m_Layers.emplace(iter, layer);
-			}
-		}
+		m_Layers.emplace(m_Layers.begin() + m_LayerInsertIndex, layer);
 		++m_LayerInsertIndex;
 	}
 
@@ -30,17 +20,17 @@ namespace Phoenix {
 	}
 
 	void LayerStack::PopLayer(Layer* layer) {
-		if (m_LayerInsertIndex >= 0) {
-			std::vector<Layer*>::iterator iter = m_Layers.begin() + m_LayerInsertIndex;
-			m_Layers.erase(iter);
+		std::vector<Layer*>::iterator it = std::find(m_Layers.begin(), m_Layers.end(), layer);
+		if (it != m_Layers.end()) {
+			m_Layers.erase(it);
 			--m_LayerInsertIndex;
 		}
 	}
 
 	void LayerStack::PopOverlay(Layer* overlay) {
-		std::vector<Layer*>::iterator iter = m_Layers.begin() + m_LayerInsertIndex + 1;
-		if (iter != m_Layers.end()) {
-			m_Layers.pop_back();
+		std::vector<Layer*>::iterator it = std::find(m_Layers.begin(), m_Layers.end(), overlay);
+		if (it != m_Layers.end()) {
+			m_Layers.erase(it);
 		}
 	}
 }

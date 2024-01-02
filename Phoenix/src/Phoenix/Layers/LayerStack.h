@@ -19,6 +19,6 @@ namespace Phoenix {
 	private:
 		// first half are layers, second half are overlays
 		std::vector<Layer*> m_Layers;
-		int m_LayerInsertIndex;
+		unsigned int m_LayerInsertIndex = 0;
 	};
 }
