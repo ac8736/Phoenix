@@ -19,9 +19,11 @@ group "Dependencies"
 group ""
 
 project "Phoenix"
-	kind "SharedLib"
+	kind "StaticLib"
 	language "C++"
 	location "Phoenix"
+	staticruntime "on"
+	cppdialect "Default"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("obj/" .. outputdir .. "/%{prj.name}")
@@ -50,11 +52,7 @@ project "Phoenix"
 		"opengl32.lib",
 	}
 
-	postbuildcommands { ("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"") }
-
 	filter "system:windows"
-		cppdialect "Default"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines {
@@ -65,26 +63,25 @@ project "Phoenix"
 
 	filter "configurations:Debug"
 		defines "PN_DEBUG"
-		staticruntime "off"
 		runtime "Debug"
-		symbols "On"
+		symbols "on"
 
 	filter "configurations:Release"
 		defines "PN_RELEASE"
-		staticruntime "off"
 		runtime "Release"
-		optimize "On"
+		optimize "on"
 
 	filter "configurations:Dist"
 		defines "PN_DIST"
-		staticruntime "off"
 		runtime "Release"
-		optimize "On"
+		optimize "on"
 
 project "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
 	location "Sandbox"
+	cppdialect "Default"
+	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("obj/" .. outputdir .. "/%{prj.name}")
@@ -104,8 +101,6 @@ project "Sandbox"
 	}
 
 	filter "system:windows"
-		cppdialect "Default"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines {
@@ -114,18 +109,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "PN_DEBUG"
-		staticruntime "off"
 		runtime "Debug"
-		symbols "On"
+		symbols "on"
 
 	filter "configurations:Release"
 		defines "PN_RELEASE"
-		staticruntime "off"
 		runtime "Release"
-		optimize "On"
+		optimize "on"
 
 	filter "configurations:Dist"
 		defines "PN_DIST"
-		staticruntime "off"
 		runtime "Release"
-		optimize "On"
+		optimize "on"
