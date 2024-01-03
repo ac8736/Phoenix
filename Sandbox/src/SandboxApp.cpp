@@ -14,10 +14,7 @@ public:
     }
 
     void OnImGuiRender() override {
-        ImGui::NewFrame();
-        ImGui::Begin("Start");
-        ImGui::Text("Hello world.");
-        ImGui::End();
+
     }
 };
 
