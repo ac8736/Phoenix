@@ -33,6 +33,7 @@ namespace Phoenix {
 		m_Data.Title = props.Title;
 		m_Data.Width = props.Width;
 		m_Data.Height = props.Height;
+		m_Data.VSync = true;
 
 		// PN_CORE_INFO("Window {0} of width {1} and height {2} is being created.", props.Title, props.Width, props.Height);
 
@@ -110,7 +111,7 @@ namespace Phoenix {
 		});
 		glfwSetScrollCallback(m_Window, [](GLFWwindow* window, double xoffset, double yoffset) {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
-			MouseScrolledEvent event(xoffset, yoffset);
+			MouseScrolledEvent event((float)xoffset, (float)yoffset);
 			data.EventCallback(event);
 		});
 		glfwSetCursorPosCallback(m_Window, [](GLFWwindow* window, double xpos, double ypos) {
