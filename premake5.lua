@@ -58,7 +58,8 @@ project "Phoenix"
 		defines {
 			"PN_PLATFORM_WINDOWS",
 			"PN_BUILD_DLL",
-			"GLFW_INCLUDE_NONE"
+			"GLFW_INCLUDE_NONE",
+			"_CRT_SECURE_NO_WARNINGS"
 		}
 
 	filter "configurations:Debug"
