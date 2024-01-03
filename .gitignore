@@ -2,3 +2,6 @@
 .vs/
 bin/
 obj/
+
+# files
+Sandbox/imgui.ini
