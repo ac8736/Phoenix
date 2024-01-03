@@ -1,0 +1,308 @@
+[33mcommit add6a54962e4b70b13a59265584d7f1ba2ae9ec6[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: c20de95 b7ad4ca
+Author: Andy Chen <87680132+ac8736@users.noreply.github.com>
+Date:   Tue Jan 2 20:38:38 2024 -0500
+
+    Merge pull request #15 from ac8736/fixes
+    
+    Fixes
+
+[33mcommit b7ad4ca381ea98d60c29f6f095700b5f352de359[m[33m ([m[1;31morigin/fixes[m[33m)[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Tue Jan 2 20:38:16 2024 -0500
+
+    Fixes. Moving to static libraries.
+
+[33mcommit ec87bdcb7b95f37927da4f8c8efd8c98615da6c5[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Tue Jan 2 15:38:31 2024 -0500
+
+    Removed some test code.
+
+[33mcommit c20de9583f92dc13ca2447ec93936342421557f2[m
+Merge: 5f8a770 3a3b0bc
+Author: Andy Chen <87680132+ac8736@users.noreply.github.com>
+Date:   Tue Jan 2 02:12:06 2024 -0500
+
+    Merge pull request #14 from ac8736/docking
+    
+    Docking
+
+[33mcommit 3a3b0bcc557fba2a81bfe41e2c4d899779a77be3[m[33m ([m[1;31morigin/docking[m[33m)[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Tue Jan 2 01:46:05 2024 -0500
+
+    Linking Sandbox to ImGui.
+
+[33mcommit 2a906d6c7f384f7898f50258ac01691914256df6[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Tue Jan 2 00:57:12 2024 -0500
+
+    Changing to ImGui docking branch.
+
+[33mcommit 5f8a770f5ce3fe534af601a7d1b566814173ed73[m
+Merge: 61f418b 76af8f9
+Author: Andy Chen <87680132+ac8736@users.noreply.github.com>
+Date:   Mon Jan 1 17:42:18 2024 -0500
+
+    Merge pull request #13 from ac8736/math
+    
+    Add glm.
+
+[33mcommit 76af8f99465e7e2efb488a302df7049be38738f1[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Mon Jan 1 17:41:50 2024 -0500
+
+    Add glm.
+
+[33mcommit 61f418b088671b882d91eb71bf5925ba79e17f30[m
+Merge: 470d643 386d877
+Author: Andy Chen <87680132+ac8736@users.noreply.github.com>
+Date:   Mon Jan 1 15:38:17 2024 -0500
+
+    Merge pull request #12 from ac8736/keycodes
+    
+    Adding key codes.
+
+[33mcommit 386d87756531405f8e89d160a564b6be7124a01f[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Mon Jan 1 15:37:50 2024 -0500
+
+    Adding key codes.
+
+[33mcommit 470d64340e6440f586c396d3de4a791a3b22939d[m
+Merge: 39fdfc6 5605155
+Author: Andy Chen <87680132+ac8736@users.noreply.github.com>
+Date:   Sun Dec 31 03:06:32 2023 -0500
+
+    Merge pull request #11 from ac8736/input_polling
+    
+    Adding input polling.
+
+[33mcommit 5605155960d266ea07019425d62e0bb835a5c190[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Sun Dec 31 02:26:07 2023 -0500
+
+    Adding input polling.
+
+[33mcommit 39fdfc6fa7ff704731096f36fe493f0d668db6fb[m
+Merge: 88c375c ab68015
+Author: Andy Chen <87680132+ac8736@users.noreply.github.com>
+Date:   Sat Dec 30 21:35:50 2023 -0500
+
+    Merge pull request #10 from ac8736/fixes
+    
+    Fixes
+
+[33mcommit ab680157014d0ca2a6e66fca0c8984e5c4af58d4[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Sat Dec 30 20:37:41 2023 -0500
+
+    Update base premake5.lua
+
+[33mcommit 6cd80b8d76c236a8f9744fafeac787e2072c051b[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Sat Dec 30 20:25:22 2023 -0500
+
+    Update base premake5.lua
+
+[33mcommit b5b8af1dbbb10cb201d2f60eda6a0c708b993ac5[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Sat Dec 30 17:15:08 2023 -0500
+
+    Update Core.h
+
+[33mcommit 88c375c6bfba93b3e962a17a0d4a49513050f38d[m
+Merge: e4e789b f3d0049
+Author: Andy Chen <87680132+ac8736@users.noreply.github.com>
+Date:   Sat Dec 30 00:49:51 2023 -0500
+
+    Merge pull request #9 from ac8736/imgui
+    
+    ImGui and events
+
+[33mcommit f3d0049e4a2f5cb29a8c93b7fcd061850ba79b62[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Sat Dec 30 00:49:12 2023 -0500
+
+    Adding ImGui events.
+
+[33mcommit b37debf58a7998b6110740d3dc645a94287ea988[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Fri Dec 29 02:48:13 2023 -0500
+
+    Adding ImGui example render.
+
+[33mcommit e4e789b3bae1ef5c8b2f800fb43a2ad10c786e96[m
+Merge: 11259e6 6c8166d
+Author: Andy Chen <87680132+ac8736@users.noreply.github.com>
+Date:   Thu Dec 28 02:54:02 2023 -0500
+
+    Merge pull request #8 from ac8736/glad
+    
+    Adding in glad loader-generator.
+
+[33mcommit 6c8166d44834f9d13521bd5c08f8db9c50e94ba5[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Thu Dec 28 02:51:13 2023 -0500
+
+    Adding in glad loader-generator.
+
+[33mcommit 11259e60bce48ae8419fbad8a0673a7a5f55fc0b[m
+Merge: 59a7486 c3f1248
+Author: Andy Chen <87680132+ac8736@users.noreply.github.com>
+Date:   Thu Dec 28 00:00:16 2023 -0500
+
+    Merge pull request #7 from ac8736/layers
+    
+    Adding layers.
+
+[33mcommit c3f1248af6b2cdf41e15f8dc0825551923966cdf[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Wed Dec 27 23:59:08 2023 -0500
+
+    Adding layers.
+
+[33mcommit 59a748674e2eba043c8a5567e151cd27fd5fa85f[m
+Merge: 0227a3c 4624932
+Author: Andy Chen <87680132+ac8736@users.noreply.github.com>
+Date:   Wed Dec 27 16:06:59 2023 -0500
+
+    Merge pull request #6 from ac8736/events
+    
+    Events
+
+[33mcommit 46249329387fc4fc09c79fcc83cf34fe0ca9de3f[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Wed Dec 27 16:05:50 2023 -0500
+
+    Adding GLFW events: mouse, keyboard, window close/resize.
+
+[33mcommit d79f5d013faab6e45bc96cd2aac83b47e27fd829[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Tue Dec 26 16:51:49 2023 -0500
+
+    Removing the testing events class code in Application.cpp
+
+[33mcommit 0227a3cfe9e156dc6a7260745a96ba9eccb893e8[m
+Merge: ea3e4bc 6fdc84e
+Author: Andy Chen <87680132+ac8736@users.noreply.github.com>
+Date:   Tue Dec 26 16:37:14 2023 -0500
+
+    Merge pull request #5 from ac8736/windows
+    
+    Windows
+
+[33mcommit 6fdc84e0ea1ccaf637c4095fd3a2983c594dd686[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Tue Dec 26 15:54:57 2023 -0500
+
+    Adding comments to Windows.
+
+[33mcommit 5944b9a7cb423c3e9b15e0d3c88b569e8d183522[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Tue Dec 26 14:52:27 2023 -0500
+
+    Added GLFW and simple Windows abstractions. Fixed ostream bug.
+
+[33mcommit ea3e4bc31c411cc170ac73c14d8315d11bf2a78d[m
+Author: Andy Chen <87680132+ac8736@users.noreply.github.com>
+Date:   Sun Dec 24 12:00:17 2023 -0500
+
+    Update README.md
+
+[33mcommit aff8916a9ad4f1a5ac9e557f4cd0db1015152a2a[m
+Merge: 2773491 ee5c017
+Author: Andy Chen <87680132+ac8736@users.noreply.github.com>
+Date:   Sun Dec 24 11:55:11 2023 -0500
+
+    Merge pull request #4 from ac8736/pch
+    
+    Adding precompiled headers.
+
+[33mcommit ee5c01753ebccf82252e129676bfe1da89241db7[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Sun Dec 24 11:50:54 2023 -0500
+
+    Adding precompiled headers.
+
+[33mcommit 2773491840844f3eb02bed0e2d621d136ae1567b[m
+Merge: 4be4d79 daf005e
+Author: Andy Chen <87680132+ac8736@users.noreply.github.com>
+Date:   Sat Dec 23 20:47:48 2023 -0500
+
+    Merge pull request #3 from ac8736/log_change
+    
+    Changing logging macros.
+
+[33mcommit daf005e71bffc9a43ac782cb1c73f6a1a9d8d9ca[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Sat Dec 23 20:46:53 2023 -0500
+
+    Changing logging macros.
+
+[33mcommit 4be4d79736e049ce19b527cb2845c66cba65434a[m
+Merge: b6c0d52 662c2e7
+Author: Andy Chen <87680132+ac8736@users.noreply.github.com>
+Date:   Sat Dec 23 00:37:26 2023 -0500
+
+    Merge pull request #2 from ac8736/event_system
+    
+    Event system
+
+[33mcommit 662c2e769ee02e650bb7561bb791b62107b8ce95[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Sat Dec 23 00:36:14 2023 -0500
+
+    Adding comments to the events.
+
+[33mcommit e2a60f7f0a2b009a65cea4473d8a91f8e8b6fd54[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Fri Dec 22 23:47:24 2023 -0500
+
+    Adding the Events we will be using in the future.
+
+[33mcommit 128438ff59d6e90c6ff5efd873ec6c545b0b9e41[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Fri Dec 22 03:16:15 2023 -0500
+
+    Adding the Event and Dispatcher class
+
+[33mcommit b6c0d52a83deca6eaf1788093f706ca357ed582c[m
+Author: Andy Chen <87680132+ac8736@users.noreply.github.com>
+Date:   Thu Dec 21 00:12:33 2023 -0500
+
+    Update README.md
+
+[33mcommit 6cd1415b8dc0fa6e3fae1b6ede0c624390e4c008[m
+Merge: f2689cf 3e72b13
+Author: Andy Chen <87680132+ac8736@users.noreply.github.com>
+Date:   Wed Dec 20 22:47:08 2023 -0500
+
+    Merge pull request #1 from ac8736/build_script
+    
+    Adding premake5 as a VS project file generator.
+
+[33mcommit 3e72b134505424da4a30bd9ffcda3ee63992a2de[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Wed Dec 20 16:17:51 2023 -0500
+
+    Adding premake5 as a VS project file generator.
+
+[33mcommit f2689cf6f2596c9276e98684914552142f41e8d2[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Tue Dec 19 03:04:13 2023 -0500
+
+    Add spdlog library and wrapper.
+
+[33mcommit e54e292f81e786a249bb4c7aa0bd96fcdb7dfe0f[m
+Author: Kewl <87680132+ac8736@users.noreply.github.com>
+Date:   Mon Dec 18 01:15:37 2023 -0500
+
+    Setup basic application and its entry point.
+
+[33mcommit e484dd4ca302cf906bc0c93715232b33ef4ce632[m
+Author: Andy Chen <87680132+ac8736@users.noreply.github.com>
+Date:   Sun Dec 17 02:44:36 2023 -0500
+
+    Initial commit

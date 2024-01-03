@@ -1,5 +1,4 @@
 #include "Phoenix/Phoenix.h"
-#include "imgui.h"
 
 class ExampleLayer : public Phoenix::Layer {
 public:
@@ -14,10 +13,7 @@ public:
     }
 
     void OnImGuiRender() override {
-        ImGui::NewFrame();
-        ImGui::Begin("Start");
-        ImGui::Text("Hello world.");
-        ImGui::End();
+
     }
 };
 
