@@ -29,6 +29,7 @@ namespace Phoenix
 		LayerStack m_LayerStack;
 		std::unique_ptr<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
+		unsigned int m_VertexArray, m_VertexBuffer, m_IndexBuffer;
 
 		static Application* s_Instance;
 	};
