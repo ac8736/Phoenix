@@ -1,7 +1,9 @@
 #pragma once
 
 #include "Phoenix/Window.h"
-#include "GLFW/glfw3.h"
+#include "Phoenix/Renderer/GraphicsContext.h"
+
+struct GLFWwindow;
 
 namespace Phoenix {
 
@@ -27,6 +29,7 @@ namespace Phoenix {
 		virtual void Shutdown();
 
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 
 		// data to be passed during event callbacks
 		struct WindowData {

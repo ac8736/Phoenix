@@ -79,6 +79,8 @@
       <Filter>Phoenix</Filter>
     </ClInclude>
     <ClInclude Include="src\pnpch.h" />
+    <ClInclude Include="src\Phoenix\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLContext.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Phoenix\Application.cpp">
@@ -106,5 +108,6 @@
       <Filter>Phoenix\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\pnpch.cpp" />
+    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLContext.cpp" />
   </ItemGroup>
 </Project>
