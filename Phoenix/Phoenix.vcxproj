@@ -159,6 +159,7 @@
     <ClInclude Include="src\Phoenix\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Phoenix\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Phoenix\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Phoenix\Renderer\Shader.h" />
     <ClInclude Include="src\Phoenix\Window.h" />
     <ClInclude Include="src\pnpch.h" />
   </ItemGroup>
@@ -172,6 +173,7 @@
     <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Phoenix\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Phoenix\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\Phoenix\Renderer\Shader.cpp" />
     <ClCompile Include="src\pnpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
