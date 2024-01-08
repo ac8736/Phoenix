@@ -81,6 +81,7 @@
     <ClInclude Include="src\pnpch.h" />
     <ClInclude Include="src\Phoenix\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\Phoenix\Renderer\Shader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Phoenix\Application.cpp">
@@ -109,5 +110,6 @@
     </ClCompile>
     <ClCompile Include="src\pnpch.cpp" />
     <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\Phoenix\Renderer\Shader.cpp" />
   </ItemGroup>
 </Project>

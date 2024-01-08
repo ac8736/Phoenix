@@ -13,6 +13,8 @@ namespace Phoenix {
 		glfwMakeContextCurrent(m_WindowHandle);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		PN_CORE_ASSERT(status, "Failed to initialize Glad.");
+
+		std::cout << "GPU: " << glGetString(GL_RENDERER) << '\n';
 	}
 
 	void OpenGLContext::SwapBuffers() {
