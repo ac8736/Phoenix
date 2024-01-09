@@ -19,8 +19,14 @@
     <Filter Include="Phoenix\Platform">
       <UniqueIdentifier>{9463FE20-805C-1D73-A98E-02F895E6FC7E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Phoenix\Platform\OpenGL">
+      <UniqueIdentifier>{48BEFC44-B4F5-44DC-BDFF-A8FF29B66BD5}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Phoenix\Platform\Windows">
       <UniqueIdentifier>{CE61B03C-BA86-FFBC-E3D1-E44CCF55FEDA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Phoenix\Renderer">
+      <UniqueIdentifier>{E66ADBFB-D263-FA4D-FB95-DFD2E7EDD959}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -69,19 +75,29 @@
     <ClInclude Include="src\Phoenix\Phoenix.h">
       <Filter>Phoenix</Filter>
     </ClInclude>
+    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLContext.h">
+      <Filter>Phoenix\Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Phoenix\Platform\Windows\WindowsInput.h">
       <Filter>Phoenix\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\Phoenix\Platform\Windows\WindowsWindow.h">
       <Filter>Phoenix\Platform\Windows</Filter>
     </ClInclude>
+    <ClInclude Include="src\Phoenix\Renderer\GraphicsContext.h">
+      <Filter>Phoenix\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Phoenix\Renderer\Shader.h">
+      <Filter>Phoenix\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Phoenix\Window.h">
       <Filter>Phoenix</Filter>
     </ClInclude>
     <ClInclude Include="src\pnpch.h" />
-    <ClInclude Include="src\Phoenix\Renderer\GraphicsContext.h" />
-    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLContext.h" />
-    <ClInclude Include="src\Phoenix\Renderer\Shader.h" />
+    <ClInclude Include="src\Phoenix\Renderer\Renderer.h" />
+    <ClInclude Include="src\Phoenix\Renderer\Buffer.h" />
+    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLShader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Phoenix\Application.cpp">
@@ -102,14 +118,22 @@
     <ClCompile Include="src\Phoenix\Log\Log.cpp">
       <Filter>Phoenix\Log</Filter>
     </ClCompile>
+    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>Phoenix\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Phoenix\Platform\Windows\WindowsInput.cpp">
       <Filter>Phoenix\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Phoenix\Platform\Windows\WindowsWindow.cpp">
       <Filter>Phoenix\Platform\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="src\Phoenix\Renderer\Shader.cpp">
+      <Filter>Phoenix\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\pnpch.cpp" />
-    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLContext.cpp" />
-    <ClCompile Include="src\Phoenix\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Phoenix\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\Phoenix\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLShader.cpp" />
   </ItemGroup>
 </Project>
