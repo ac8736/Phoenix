@@ -62,11 +62,11 @@ namespace Phoenix {
 
 			void main()
 			{
-				color = vec4(v_Position + 0.5, 1.0);
+				color = vec4(v_Position + 0.9, 1.0);
 			}
 		)";
 
-		m_Shader.reset(new Shader(vertexShader, fragmentShader));
+		m_Shader.reset(Shader::Create(vertexShader, fragmentShader));
 	}
 
 	Application::~Application() {
@@ -74,7 +74,6 @@ namespace Phoenix {
 	}
 
 	void Application::OnEvent(Event& e) {
-		// PN_CORE_TRACE("{0}", e);
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClose));
 
@@ -88,7 +87,7 @@ namespace Phoenix {
 
 	void Application::Run() {
 		while (m_Running) {
-			glClearColor(0.2, 0.2, 0.2, 1);
+			glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT);
 
 			m_Shader->Bind();

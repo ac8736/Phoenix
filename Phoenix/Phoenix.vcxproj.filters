@@ -97,6 +97,7 @@
     <ClInclude Include="src\Phoenix\Renderer\Renderer.h" />
     <ClInclude Include="src\Phoenix\Renderer\Buffer.h" />
     <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLShader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Phoenix\Application.cpp">
@@ -133,5 +134,6 @@
     <ClCompile Include="src\Phoenix\Renderer\Buffer.cpp" />
     <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Phoenix\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLShader.cpp" />
   </ItemGroup>
 </Project>
