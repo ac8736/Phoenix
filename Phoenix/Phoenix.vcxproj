@@ -140,6 +140,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLVertexArray.h" />
     <ClInclude Include="src\Phoenix\Application.h" />
     <ClInclude Include="src\Phoenix\Core.h" />
     <ClInclude Include="src\Phoenix\EntryPoint.h" />
@@ -164,10 +165,12 @@
     <ClInclude Include="src\Phoenix\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Phoenix\Renderer\Renderer.h" />
     <ClInclude Include="src\Phoenix\Renderer\Shader.h" />
+    <ClInclude Include="src\Phoenix\Renderer\VertexArray.h" />
     <ClInclude Include="src\Phoenix\Window.h" />
     <ClInclude Include="src\pnpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLVertexArray.cpp" />
     <ClCompile Include="src\Phoenix\Application.cpp" />
     <ClCompile Include="src\Phoenix\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Phoenix\ImGui\ImGuiLayer.cpp" />
@@ -182,6 +185,7 @@
     <ClCompile Include="src\Phoenix\Renderer\Buffer.cpp" />
     <ClCompile Include="src\Phoenix\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Phoenix\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Phoenix\Renderer\VertexArray.cpp" />
     <ClCompile Include="src\pnpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>

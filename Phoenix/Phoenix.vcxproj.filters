@@ -98,6 +98,8 @@
     <ClInclude Include="src\Phoenix\Renderer\Buffer.h" />
     <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLShader.h" />
+    <ClInclude Include="src\Phoenix\Renderer\VertexArray.h" />
+    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLVertexArray.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Phoenix\Application.cpp">
@@ -135,5 +137,7 @@
     <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Phoenix\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLShader.cpp" />
+    <ClCompile Include="src\Phoenix\Renderer\VertexArray.cpp" />
+    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLVertexArray.cpp" />
   </ItemGroup>
 </Project>
