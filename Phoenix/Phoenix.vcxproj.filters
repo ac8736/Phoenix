@@ -100,6 +100,9 @@
     <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLShader.h" />
     <ClInclude Include="src\Phoenix\Renderer\VertexArray.h" />
     <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLVertexArray.h" />
+    <ClInclude Include="src\Phoenix\Renderer\RendererAPI.h" />
+    <ClInclude Include="src\Phoenix\Renderer\RenderCommand.h" />
+    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLRendererAPI.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Phoenix\Application.cpp">
@@ -139,5 +142,8 @@
     <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLShader.cpp" />
     <ClCompile Include="src\Phoenix\Renderer\VertexArray.cpp" />
     <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLVertexArray.cpp" />
+    <ClCompile Include="src\Phoenix\Renderer\RendererAPI.cpp" />
+    <ClCompile Include="src\Phoenix\Renderer\RenderCommand.cpp" />
+    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLRendererAPI.cpp" />
   </ItemGroup>
 </Project>
