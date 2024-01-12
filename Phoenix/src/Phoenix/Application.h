@@ -8,6 +8,7 @@
 #include "Renderer/Shader.h"
 #include "Renderer/Buffer.h"
 #include "Renderer/VertexArray.h"
+#include "Renderer/OrthographicCamera.h"
 
 namespace Phoenix 
 {
@@ -34,6 +35,7 @@ namespace Phoenix
 		ImGuiLayer* m_ImGuiLayer;
 		std::shared_ptr<Shader> m_Shader;
 		std::shared_ptr<VertexArray> m_VertexArray;
+		OrthographicCamera m_Camera;
 
 		static Application* s_Instance;
 	};
