@@ -33,9 +33,6 @@ namespace Phoenix
 		LayerStack m_LayerStack;
 		std::unique_ptr<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
-		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<VertexArray> m_VertexArray;
-		OrthographicCamera m_Camera;
 
 		static Application* s_Instance;
 	};
