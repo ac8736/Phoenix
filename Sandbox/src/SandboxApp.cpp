@@ -67,18 +67,22 @@ public:
 		m_Shader.reset(Phoenix::Shader::Create(vertexShader, fragmentShader));
     }
 
-    void OnUpdate() override {
+    void OnUpdate(Phoenix::Timestep timestamp) override {
+		float tsSeconds = timestamp.GetSeconds();
+		float tsMilliseconds = timestamp.GetMilliseconds();
+		PN_CLIENT_TRACE("{0} FPS, {1} ms", (unsigned int)(1000.0f / tsMilliseconds), tsMilliseconds);
+
 		if (Phoenix::Input::IsKeyPressed(PN_KEY_LEFT)) {
-			m_Camera.SetPosition({ m_Camera.GetPosition().x - m_CameraSpeed, m_Camera.GetPosition().y, m_Camera.GetPosition().z });
+			m_Camera.SetPosition({ m_Camera.GetPosition().x - m_CameraSpeed * tsSeconds, m_Camera.GetPosition().y, m_Camera.GetPosition().z });
 		}
 		if (Phoenix::Input::IsKeyPressed(PN_KEY_RIGHT)) {
-			m_Camera.SetPosition({ m_Camera.GetPosition().x + m_CameraSpeed, m_Camera.GetPosition().y, m_Camera.GetPosition().z });
+			m_Camera.SetPosition({ m_Camera.GetPosition().x + m_CameraSpeed * tsSeconds, m_Camera.GetPosition().y, m_Camera.GetPosition().z });
 		}
 		if (Phoenix::Input::IsKeyPressed(PN_KEY_UP)) {
-			m_Camera.SetPosition({ m_Camera.GetPosition().x, m_Camera.GetPosition().y + m_CameraSpeed, m_Camera.GetPosition().z });
+			m_Camera.SetPosition({ m_Camera.GetPosition().x, m_Camera.GetPosition().y + m_CameraSpeed * tsSeconds, m_Camera.GetPosition().z });
 		}
 		if (Phoenix::Input::IsKeyPressed(PN_KEY_DOWN)) {
-			m_Camera.SetPosition({ m_Camera.GetPosition().x, m_Camera.GetPosition().y - m_CameraSpeed, m_Camera.GetPosition().z });
+			m_Camera.SetPosition({ m_Camera.GetPosition().x, m_Camera.GetPosition().y - m_CameraSpeed * tsSeconds, m_Camera.GetPosition().z });
 		}
 
         Phoenix::RenderCommand::SetClearColor({ 0.2f, 0.2f, 0.2f, 1.0f });
@@ -103,7 +107,7 @@ private:
     std::shared_ptr<Phoenix::VertexArray> m_VertexArray;
     Phoenix::OrthographicCamera m_Camera;
 
-	float m_CameraSpeed = 0.02f;
+	float m_CameraSpeed = 1.0f;
 };
 
 class Sandbox : public Phoenix::Application {

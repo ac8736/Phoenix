@@ -13,6 +13,7 @@
 #include "Phoenix/Renderer/VertexArray.h"
 #include "Phoenix/KeyCodes.h"
 #include "Phoenix/Input.h"
+#include "Phoenix/Core/Timestep.h"
 
 // ---- Entry Point -------
 #include "Phoenix/EntryPoint.h"

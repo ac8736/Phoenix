@@ -104,6 +104,7 @@
     <ClInclude Include="src\Phoenix\Renderer\RenderCommand.h" />
     <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLRendererAPI.h" />
     <ClInclude Include="src\Phoenix\Renderer\OrthographicCamera.h" />
+    <ClInclude Include="src\Phoenix\Core\Timestep.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Phoenix\Application.cpp">

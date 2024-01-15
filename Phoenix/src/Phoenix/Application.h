@@ -9,6 +9,7 @@
 #include "Renderer/Buffer.h"
 #include "Renderer/VertexArray.h"
 #include "Renderer/OrthographicCamera.h"
+#include "Core/Timestep.h"
 
 namespace Phoenix 
 {
@@ -33,6 +34,7 @@ namespace Phoenix
 		LayerStack m_LayerStack;
 		std::unique_ptr<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
+		float m_LastFrameTime = 0.0f;
 
 		static Application* s_Instance;
 	};
