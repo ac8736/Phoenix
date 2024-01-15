@@ -5,9 +5,10 @@
 #include "Input.h"
 
 #include "Phoenix/Renderer/Renderer.h"
-
 #include "Events/ApplicationEvent.h"
+
 #include <glad/glad.h>
+#include <GLFW/glfw3.h>
 
 namespace Phoenix {
 #define BIND_EVENT_FN(x) std::bind(&x, this, std::placeholders::_1)
@@ -61,7 +62,18 @@ namespace Phoenix {
 	}
 
 	void Application::Run() {
+		unsigned int frameCount = 0;
+		float previousTime = (float)glfwGetTime();
+		
 		while (m_Running) {
+			frameCount++;
+			float currentTime = (float)glfwGetTime();
+			if (currentTime - previousTime >= 1.0f) {
+				PN_CORE_INFO("{0} FPS", frameCount);
+				frameCount = 0;
+				previousTime = currentTime;
+			}
+			
 			for (Layer* layer : m_LayerStack) {
 				layer->OnUpdate();
 			}
