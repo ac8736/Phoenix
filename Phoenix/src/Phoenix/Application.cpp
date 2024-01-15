@@ -62,20 +62,13 @@ namespace Phoenix {
 	}
 
 	void Application::Run() {
-		unsigned int frameCount = 0;
-		float previousTime = (float)glfwGetTime();
-		
 		while (m_Running) {
-			frameCount++;
 			float currentTime = (float)glfwGetTime();
-			if (currentTime - previousTime >= 1.0f) {
-				PN_CORE_INFO("{0} FPS", frameCount);
-				frameCount = 0;
-				previousTime = currentTime;
-			}
-			
+			Timestep timestamp = currentTime - m_LastFrameTime;
+			m_LastFrameTime = currentTime;
+
 			for (Layer* layer : m_LayerStack) {
-				layer->OnUpdate();
+				layer->OnUpdate(timestamp);
 			}
 
 			m_ImGuiLayer->Begin();

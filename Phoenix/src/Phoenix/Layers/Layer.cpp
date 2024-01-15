@@ -11,7 +11,7 @@ namespace Phoenix {
 
 	void Layer::OnDetach() {}
 
-	void Layer::OnUpdate() {}
+	void Layer::OnUpdate(Timestep ts) {}
 
 	void Layer::OnImGuiRender() {}
 

@@ -140,6 +140,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Phoenix\Core\Timestep.h" />
     <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLRendererAPI.h" />
     <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLVertexArray.h" />
     <ClInclude Include="src\Phoenix\Application.h" />

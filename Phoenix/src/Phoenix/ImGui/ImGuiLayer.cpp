@@ -181,8 +181,8 @@ namespace Phoenix {
         ImGui::DestroyContext();
 	}
 
+    // Start the Dear ImGui frame
     void ImGuiLayer::Begin() {
-        // Start the Dear ImGui frame
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
@@ -205,6 +205,6 @@ namespace Phoenix {
     }
 
     void ImGuiLayer::OnImGuiRender() {
-        ImGui::ShowDemoWindow();
+        //ImGui::ShowDemoWindow();
     }
 }
