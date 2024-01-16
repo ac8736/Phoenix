@@ -173,6 +173,8 @@ namespace Phoenix {
         ImGui_ImplGlfw_InitForOpenGL(window, true);
 
         ImGui_ImplOpenGL3_Init("#version 410");
+
+        // io.Fonts->AddFontFromFileTTF("Phoenix\src\Phoenix\ImGui\Fonts\Roboto-Light.ttf", 12.0f);
 	}
 
 	void ImGuiLayer::OnDetach() {
@@ -205,6 +207,6 @@ namespace Phoenix {
     }
 
     void ImGuiLayer::OnImGuiRender() {
-        //ImGui::ShowDemoWindow();
+        // ImGui::ShowDemoWindow();
     }
 }

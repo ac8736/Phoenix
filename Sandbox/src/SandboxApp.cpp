@@ -1,5 +1,6 @@
 #include "Phoenix/Phoenix.h"
 #include "imgui.h"
+#include <imgui_internal.h>
 
 class ExampleLayer : public Phoenix::Layer {
 #define BIND_EVENT_FN(x) std::bind(&x, this, std::placeholders::_1)
@@ -71,7 +72,8 @@ public:
     void OnUpdate(Phoenix::Timestep timestamp) override {
 		float tsSeconds = timestamp.GetSeconds();
 		float tsMilliseconds = timestamp.GetMilliseconds();
-		PN_CLIENT_TRACE("{0} FPS, {1} ms", (unsigned int)(1000.0f / tsMilliseconds), tsMilliseconds);
+		m_FPS = (unsigned int)(1000.0f / tsMilliseconds);
+		m_Frametime = tsMilliseconds;
 
 		if (Phoenix::Input::IsKeyPressed(PN_KEY_LEFT)) {
 			m_Camera.SetPosition({ m_Camera.GetPosition().x - m_CameraSpeed * tsSeconds, m_Camera.GetPosition().y, m_Camera.GetPosition().z });
@@ -101,12 +103,17 @@ public:
     }
 
     void OnImGuiRender() override {
-
+		ImGui::SetNextWindowSize(ImVec2(150, 100), ImGuiCond_FirstUseEver);
+		ImGui::Begin("Framerate", nullptr, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse);
+		ImGui::Text("%d FPS, %.3f ms", m_FPS, m_Frametime);
+		ImGui::End();
     }
 private:
     std::shared_ptr<Phoenix::Shader> m_Shader;
     std::shared_ptr<Phoenix::VertexArray> m_VertexArray;
     Phoenix::OrthographicCamera m_Camera;
+	float m_Frametime = 0.0f;
+	unsigned int m_FPS = 0;
 
 	float m_CameraSpeed = 1.0f;
 };
