@@ -133,4 +133,9 @@ namespace Phoenix {
 		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
 		glUniformMatrix4fv(location, 1, GL_FALSE, glm::value_ptr(mat));
 	}
+
+	void OpenGLShader::SetUniformFloat4(const glm::vec4 vec, const std::string& name) {
+		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		glUniform4f(location, vec.x, vec.y, vec.z, vec.w);
+	}
 }

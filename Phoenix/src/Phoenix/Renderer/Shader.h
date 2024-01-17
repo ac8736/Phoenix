@@ -13,8 +13,6 @@ namespace Phoenix {
 
 		virtual const uint32_t GetShaderID() const = 0;
 
-		virtual void SetUniformMat4(const glm::mat4& mat, const std::string& name) = 0;
-
 		static Shader* Create(const std::string& vertexSource, const std::string& fragmentSource);
 	};
 }
