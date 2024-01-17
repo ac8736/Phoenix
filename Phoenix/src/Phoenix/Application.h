@@ -32,7 +32,7 @@ namespace Phoenix
 
 		bool m_Running = true;
 		LayerStack m_LayerStack;
-		std::unique_ptr<Window> m_Window;
+		Scope<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
 		float m_LastFrameTime = 0.0f;
 
