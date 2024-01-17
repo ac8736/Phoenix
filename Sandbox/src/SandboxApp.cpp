@@ -14,7 +14,7 @@ public:
 			0.5f, -0.5f, 0.0f,
 			0.0f, 0.5f, 0.0f
 		};
-		std::shared_ptr<Phoenix::VertexBuffer> vertexBuffer;
+		Phoenix::Ref<Phoenix::VertexBuffer> vertexBuffer;
 		vertexBuffer.reset(Phoenix::VertexBuffer::Create(vertices, sizeof(vertices)));
 
 		Phoenix::BufferLayout layout = {
@@ -30,7 +30,7 @@ public:
 			0.1f, 0.08f, 0.0f,
 			0.0f, 0.08f, 0.0f
 		};
-		std::shared_ptr<Phoenix::VertexBuffer> vertexBufferSquare;
+		Phoenix::Ref<Phoenix::VertexBuffer> vertexBufferSquare;
 		vertexBufferSquare.reset(Phoenix::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 
 		Phoenix::BufferLayout squareLayout = {
@@ -40,12 +40,12 @@ public:
 		m_VertexArraySquares->AddVertexBuffer(vertexBufferSquare);
 
 		uint32_t indices[3] = { 0, 1, 2 };
-		std::shared_ptr<Phoenix::IndexBuffer> indexBuffer;
+		Phoenix::Ref<Phoenix::IndexBuffer> indexBuffer;
 		indexBuffer.reset(Phoenix::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 0, 3, 2 };
-		std::shared_ptr<Phoenix::IndexBuffer> squareIndexBuffer;
+		Phoenix::Ref<Phoenix::IndexBuffer> squareIndexBuffer;
 		squareIndexBuffer.reset(Phoenix::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		m_VertexArraySquares->SetIndexBuffer(squareIndexBuffer);
 
@@ -144,9 +144,9 @@ public:
 		//ImGui::ShowDemoWindow();
     }
 private:
-    std::shared_ptr<Phoenix::Shader> m_FlatShader;
-	std::shared_ptr<Phoenix::VertexArray> m_VertexArray;
-	std::shared_ptr<Phoenix::VertexArray> m_VertexArraySquares;
+	Phoenix::Ref<Phoenix::Shader> m_FlatShader;
+	Phoenix::Ref<Phoenix::VertexArray> m_VertexArray;
+	Phoenix::Ref<Phoenix::VertexArray> m_VertexArraySquares;
     Phoenix::OrthographicCamera m_Camera;
 	float m_Frametime = 0.0f;
 	unsigned int m_FPS = 0;
