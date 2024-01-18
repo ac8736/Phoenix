@@ -140,11 +140,9 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Phoenix\Core\Timestep.h" />
-    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLRendererAPI.h" />
-    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLVertexArray.h" />
     <ClInclude Include="src\Phoenix\Application.h" />
     <ClInclude Include="src\Phoenix\Core.h" />
+    <ClInclude Include="src\Phoenix\Core\Timestep.h" />
     <ClInclude Include="src\Phoenix\EntryPoint.h" />
     <ClInclude Include="src\Phoenix\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Phoenix\Events\Event.h" />
@@ -160,7 +158,9 @@
     <ClInclude Include="src\Phoenix\Phoenix.h" />
     <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLRendererAPI.h" />
     <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLShader.h" />
+    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLVertexArray.h" />
     <ClInclude Include="src\Phoenix\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Phoenix\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Phoenix\Renderer\Buffer.h" />
@@ -175,8 +175,6 @@
     <ClInclude Include="src\pnpch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLRendererAPI.cpp" />
-    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLVertexArray.cpp" />
     <ClCompile Include="src\Phoenix\Application.cpp" />
     <ClCompile Include="src\Phoenix\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Phoenix\ImGui\ImGuiLayer.cpp" />
@@ -185,7 +183,9 @@
     <ClCompile Include="src\Phoenix\Log\Log.cpp" />
     <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLRendererAPI.cpp" />
     <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLShader.cpp" />
+    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLVertexArray.cpp" />
     <ClCompile Include="src\Phoenix\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Phoenix\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Phoenix\Renderer\Buffer.cpp" />

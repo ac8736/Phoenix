@@ -4,6 +4,9 @@
     <Filter Include="Phoenix">
       <UniqueIdentifier>{40FF9C0C-ACDE-1BA8-B5F6-A67E21558209}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Phoenix\Core">
+      <UniqueIdentifier>{98AB57BA-840E-E75E-2D94-1F1519D6B2E1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Phoenix\Events">
       <UniqueIdentifier>{240313B4-10D1-06BA-F964-77E0E5D1E21E}</UniqueIdentifier>
     </Filter>
@@ -35,6 +38,9 @@
     </ClInclude>
     <ClInclude Include="src\Phoenix\Core.h">
       <Filter>Phoenix</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Phoenix\Core\Timestep.h">
+      <Filter>Phoenix\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Phoenix\EntryPoint.h">
       <Filter>Phoenix</Filter>
@@ -75,7 +81,19 @@
     <ClInclude Include="src\Phoenix\Phoenix.h">
       <Filter>Phoenix</Filter>
     </ClInclude>
+    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLBuffer.h">
+      <Filter>Phoenix\Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLContext.h">
+      <Filter>Phoenix\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLRendererAPI.h">
+      <Filter>Phoenix\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLShader.h">
+      <Filter>Phoenix\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLVertexArray.h">
       <Filter>Phoenix\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Phoenix\Platform\Windows\WindowsInput.h">
@@ -84,27 +102,34 @@
     <ClInclude Include="src\Phoenix\Platform\Windows\WindowsWindow.h">
       <Filter>Phoenix\Platform\Windows</Filter>
     </ClInclude>
+    <ClInclude Include="src\Phoenix\Renderer\Buffer.h">
+      <Filter>Phoenix\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Phoenix\Renderer\GraphicsContext.h">
       <Filter>Phoenix\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Phoenix\Renderer\OrthographicCamera.h">
+      <Filter>Phoenix\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Phoenix\Renderer\RenderCommand.h">
+      <Filter>Phoenix\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Phoenix\Renderer\Renderer.h">
+      <Filter>Phoenix\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Phoenix\Renderer\RendererAPI.h">
+      <Filter>Phoenix\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Phoenix\Renderer\Shader.h">
+      <Filter>Phoenix\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Phoenix\Renderer\VertexArray.h">
       <Filter>Phoenix\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Phoenix\Window.h">
       <Filter>Phoenix</Filter>
     </ClInclude>
     <ClInclude Include="src\pnpch.h" />
-    <ClInclude Include="src\Phoenix\Renderer\Renderer.h" />
-    <ClInclude Include="src\Phoenix\Renderer\Buffer.h" />
-    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLBuffer.h" />
-    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLShader.h" />
-    <ClInclude Include="src\Phoenix\Renderer\VertexArray.h" />
-    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLVertexArray.h" />
-    <ClInclude Include="src\Phoenix\Renderer\RendererAPI.h" />
-    <ClInclude Include="src\Phoenix\Renderer\RenderCommand.h" />
-    <ClInclude Include="src\Phoenix\Platform\OpenGL\OpenGLRendererAPI.h" />
-    <ClInclude Include="src\Phoenix\Renderer\OrthographicCamera.h" />
-    <ClInclude Include="src\Phoenix\Core\Timestep.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Phoenix\Application.cpp">
@@ -125,7 +150,19 @@
     <ClCompile Include="src\Phoenix\Log\Log.cpp">
       <Filter>Phoenix\Log</Filter>
     </ClCompile>
+    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLBuffer.cpp">
+      <Filter>Phoenix\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>Phoenix\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLRendererAPI.cpp">
+      <Filter>Phoenix\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLShader.cpp">
+      <Filter>Phoenix\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLVertexArray.cpp">
       <Filter>Phoenix\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Phoenix\Platform\Windows\WindowsInput.cpp">
@@ -134,19 +171,27 @@
     <ClCompile Include="src\Phoenix\Platform\Windows\WindowsWindow.cpp">
       <Filter>Phoenix\Platform\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="src\Phoenix\Renderer\Buffer.cpp">
+      <Filter>Phoenix\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Phoenix\Renderer\OrthographicCamera.cpp">
+      <Filter>Phoenix\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Phoenix\Renderer\RenderCommand.cpp">
+      <Filter>Phoenix\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Phoenix\Renderer\Renderer.cpp">
+      <Filter>Phoenix\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Phoenix\Renderer\RendererAPI.cpp">
+      <Filter>Phoenix\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\Phoenix\Renderer\Shader.cpp">
       <Filter>Phoenix\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Phoenix\Renderer\VertexArray.cpp">
+      <Filter>Phoenix\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\pnpch.cpp" />
-    <ClCompile Include="src\Phoenix\Renderer\Buffer.cpp" />
-    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLBuffer.cpp" />
-    <ClCompile Include="src\Phoenix\Renderer\Renderer.cpp" />
-    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLShader.cpp" />
-    <ClCompile Include="src\Phoenix\Renderer\VertexArray.cpp" />
-    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLVertexArray.cpp" />
-    <ClCompile Include="src\Phoenix\Renderer\RendererAPI.cpp" />
-    <ClCompile Include="src\Phoenix\Renderer\RenderCommand.cpp" />
-    <ClCompile Include="src\Phoenix\Platform\OpenGL\OpenGLRendererAPI.cpp" />
-    <ClCompile Include="src\Phoenix\Renderer\OrthographicCamera.cpp" />
   </ItemGroup>
 </Project>
